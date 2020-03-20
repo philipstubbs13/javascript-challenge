@@ -9,3 +9,14 @@ const createTable = (data, tableBody) => {
     Object.entries(ufo).forEach(([key, value]) => newRow.append('td').text(value.toString()));
   });
 };
+
+// Function to populate select dropdown with options.
+const populateSelectDropdown = (options, selectElement) => {
+  let sortedOptions = options.sort();
+  sortedOptions.forEach(option =>
+    selectElement
+      .append('option')
+      .attr('value', option)
+      .text(option),
+  );
+};
