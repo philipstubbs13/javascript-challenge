@@ -1,6 +1,6 @@
 # JavaScript Challenge
 
-With the coronavirus spreading around the world, people are worried and freaking out by doing crazy things like emptying out grocery stores, hoarding toilet paper (spoiler alert: [you really don't need that much](https://howmuchtoiletpaper.com/)), and practicing crazy ideas like social distancing. As a result of this madness, people want answers. One not so far fetched theory is that the virus came from space.
+With the coronavirus spreading around the world, people are worried and freaking out by doing crazy things like emptying out grocery stores, hoarding toilet paper (spoiler alert: you really don't need that much), and practicing crazy ideas like social distancing. As a result of this madness, people want answers. One not so far fetched theory is that the virus came from space.
 
 So, using my awesome JavaScript, HTML, CSS, and D3 skills, I have created a website that allows you to easily and quickly look up information about all the reported UFO sightings in the US and in Canada.
 
