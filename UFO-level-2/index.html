@@ -38,31 +38,30 @@
                       <ul class="list-group" id="filters">
                         <li class="filter list-group-item">
                           <label for="date">Date (e.g., 1/2/2010)</label>
-                          <input class="form-control" id="datetime" type="text" placeholder="1/2/2010" value="" />
+                          <input
+                            class="form-control"
+                            id="datetime"
+                            type="text"
+                            placeholder="1/2/2010"
+                            value=""
+                            autocomplete="off"
+                          />
                         </li>
-                        <li class="filter list-group-item">
+                        <li class="filter list-group-item select-filter">
                           <label for="city">City</label>
-                          <select class="form-control" id="city">
-                            <option selected value=""></option>
-                          </select>
+                          <select></select>
                         </li>
-                        <li class="filter list-group-item">
-                          <label for="city">State</label>
-                          <select class="form-control" id="state">
-                            <option selected value=""></option>
-                          </select>
+                        <li class="filter list-group-item select-filter">
+                          <label for="state">State</label>
+                          <select></select>
                         </li>
-                        <li class="filter list-group-item">
-                          <label for="city">Country</label>
-                          <select class="form-control" id="country">
-                            <option selected value=""></option>
-                          </select>
+                        <li class="filter list-group-item select-filter">
+                          <label for="country">Country</label>
+                          <select></select>
                         </li>
-                        <li class="filter list-group-item">
-                          <label for="city">Shape</label>
-                          <select class="form-control" id="shape">
-                            <option selected value=""></option>
-                          </select>
+                        <li class="filter list-group-item select-filter">
+                          <label for="shape">Shape</label>
+                          <select></select>
                         </li>
                       </ul>
                     </div>
@@ -92,9 +91,7 @@
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <span class="bottom">UFO Sightings</span>
-      </footer>
+      <footer class="footer"></footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
     <script src="static/js/utils.js"></script>

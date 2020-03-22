@@ -25,19 +25,9 @@ tableData.forEach(td => {
 const table = d3.select('table');
 const tableBody = table.select('tbody');
 const filterBtn = d3.select('#filter-btn');
-const stateSelect = d3.select('#state');
-const countrySelect = d3.select('#country');
-const shapeSelect = d3.select('#shape');
-const citySelect = d3.select('#city');
 
 // Call the create table function to build the table and insert data into the table.
 createTable(tableData, tableBody);
-
-// Populate the state, country, shape, and city select dropdowns.
-populateSelectDropdown(states, stateSelect);
-populateSelectDropdown(countries, countrySelect);
-populateSelectDropdown(shapes, shapeSelect);
-populateSelectDropdown(cities, citySelect);
 
 // State to hold the values of the user input fields.
 let inputValues = {
@@ -50,8 +40,31 @@ let inputValues = {
 };
 
 // Get the keys of the input elements.
-// and use those keys to set the name attribute for each input element.
 const inputKeys = Object.keys(inputValues);
+
+// Set attributes and styling for the select dropdown elements.
+d3.selectAll('select').each(function(d, i) {
+  this.setAttribute('onfocus', 'this.size=10;');
+  this.setAttribute('onblur', 'this.size=1;');
+  this.setAttribute('onchange', 'this.size=1; this.blur();');
+  this.setAttribute('style', 'height:auto;');
+  this.setAttribute('class', 'form-control');
+  this.setAttribute('id', inputKeys[i + 1]);
+});
+
+// HTML select elements
+const stateSelect = d3.select('#state');
+const countrySelect = d3.select('#country');
+const shapeSelect = d3.select('#shape');
+const citySelect = d3.select('#city');
+
+// Populate the state, country, shape, and city select dropdowns.
+populateSelectDropdown(states, stateSelect);
+populateSelectDropdown(countries, countrySelect);
+populateSelectDropdown(shapes, shapeSelect);
+populateSelectDropdown(cities, citySelect);
+
+// Uuse the input keys to set the name attribute for each input element.
 d3.selectAll('.form-control').each(function(d, i) {
   this.setAttribute('name', inputKeys[i]);
 });

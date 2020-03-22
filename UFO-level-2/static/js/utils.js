@@ -12,6 +12,10 @@ const createTable = (data, tableBody) => {
 
 // Function to populate select dropdown with options.
 const populateSelectDropdown = (options, selectElement) => {
+  selectElement
+    .append('option')
+    .attr('value', '')
+    .text('');
   let sortedOptions = options.sort();
   sortedOptions.forEach(option =>
     selectElement
