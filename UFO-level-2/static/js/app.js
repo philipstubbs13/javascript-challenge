@@ -1,25 +1,11 @@
 // from data.js
 const tableData = data;
 
-// Get list of countries, states, cities, and shapes;
-let countries = [];
-let states = [];
-let shapes = [];
-let cities = [];
-tableData.forEach(td => {
-  if (countries.indexOf(td.country) === -1) {
-    countries.push(td.country);
-  }
-  if (states.indexOf(td.state) === -1) {
-    states.push(td.state);
-  }
-  if (shapes.indexOf(td.shape) === -1) {
-    shapes.push(td.shape);
-  }
-  if (cities.indexOf(td.city) === -1) {
-    cities.push(td.city);
-  }
-});
+// Get unique list/set of countries, states, cities, and shapes;
+const countries = [...new Set(tableData.map(td => td.country))];
+const states = [...new Set(tableData.map(td => td.state))];
+const shapes = [...new Set(tableData.map(td => td.shape))];
+const cities = [...new Set(tableData.map(td => td.city))];
 
 // HTML elements/nodes
 const table = d3.select('table');
